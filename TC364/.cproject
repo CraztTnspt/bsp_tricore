@@ -337,7 +337,7 @@
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Libraries/seekfree_peripheral}&quot;"/>
                                     									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/USER}&quot;"/>
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/TC364/finsh}&quot;"/>
                                     								
                                 </option>
                                 								

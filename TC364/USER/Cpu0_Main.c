@@ -13,6 +13,8 @@ extern int rtthread_startup(void);
     disableInterrupts();
 	get_clk();
 
+	uart_init(UART_0, 115200, UART0_TX_P14_0, UART0_RX_P14_1);
+
     rtthread_startup();
 
     rt_kprintf("Failed to start rt-thread.\n");

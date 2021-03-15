@@ -45,7 +45,7 @@
 
 
 /* Command shell */
-
+#define RT_USING_FINSH
 
 /* Device virtual file system */
 
