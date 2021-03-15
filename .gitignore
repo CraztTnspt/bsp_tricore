@@ -1,0 +1,5 @@
+# Ignore ADS workspace .metadata folder
+.metadata
+
+# Ignore ADS debug folder
+*/Debug
