@@ -195,12 +195,12 @@ typedef rt_base_t                       rt_off_t;       /**< Type for offset */
 #elif defined (__TASKING__)
 
     #include <stdarg.h>
-    #define SECTION(x)
-    #define RT_UNUSED
-    #define RT_USED
+    #define SECTION(x)                  __attribute__((section(x)))
+    #define RT_UNUSED                   __attribute__((unused))
+    #define RT_USED                     __attribute__((used))
     #define PRAGMA(x)                   _Pragma(#x)
-    #define ALIGN(n)
-    #define RT_WEAK
+    #define ALIGN(n)                    __attribute__((aligned(n)))
+    #define RT_WEAK                     __attribute__((weak))
     #define rt_inline                   static inline
     #define RTT_API
 
