@@ -434,6 +434,16 @@ derivative tc26
 		"_A8_MEM" := "_A8_DATA_";
 	}
 	
+	/*RT-Thread Code Section*/
+	section_layout :vtc:linear
+    {
+        group rt_thread_section (ordered, contiguous, align = 4, run_addr=mem:pfls0)
+        {
+            /* section information for RT-Thread auto initial. */
+            select  ".rti_fn.*";
+        }       
+    }
+    
 	section_layout :vtc:abs18
 	{
 		group  (ordered, run_addr=mem:lmuram)
