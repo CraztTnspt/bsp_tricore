@@ -1161,9 +1161,9 @@ void rt_hw_console_output(const char *str)
     {
         if (*(str + i) == '\n')
         {
-            uart_putchar(UART_0, (uint8_t *)&a;
+            uart_putchar(UART_0, a);
         }
-        uart_putchar(&UART_0, (uint8_t *)(str + i));
+        uart_putchar(UART_0, str[i]);
     }
 }
 RTM_EXPORT(rt_hw_console_output);

@@ -4,14 +4,14 @@
 
 #pragma section all "cpu0_dsram"
 
-uint16 num;
-
 int core0_main(void)
 {
 extern int rtthread_startup(void);
 
     disableInterrupts();
-    get_clk();
+	get_clk();
+
+	uart_init(UART_0, 115200, UART0_TX_P14_0, UART0_RX_P14_1);
 
     rtthread_startup();
 
@@ -37,7 +37,6 @@ static rt_uint8_t led_thread_stack[2048];
 struct rt_thread led_thread_thread;
 void led_thread_entry(void *parameter)
 {
-    GPIO_Demo_init();
     while(1)
     {
         IfxPort_togglePin(&MODULE_P20, 8);
@@ -47,24 +46,27 @@ void led_thread_entry(void *parameter)
         IfxPort_togglePin(&MODULE_P21, 5);
     }
 }
+void led_demo_start(void){
 
-
-int main(void)
-{
     rt_thread_t tid;
     rt_err_t result;
-
-    rt_uint32_t count;
-
+    GPIO_Demo_init();
     tid = &led_thread_thread;
     result = rt_thread_init(tid, "led", led_thread_entry, RT_NULL,
                 led_thread_stack, sizeof(led_thread_stack), 10, 20);
     RT_ASSERT(result == RT_EOK);
     rt_thread_startup(tid);
+    rt_kprintf("Application auto init ok!\n");
+}
+INIT_APP_EXPORT(led_demo_start);
+
+int main(void)
+{
+    rt_uint32_t count = 0;
     while(1)
     {
-        rt_thread_mdelay(1000);
         rt_kprintf("hello rt-thread! %d\n",count++);
+        rt_thread_mdelay(1000);
     }
 }
 

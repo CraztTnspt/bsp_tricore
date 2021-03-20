@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "Kconfig": "bat",
+        "cpu0_main.h": "c"
+    }
+}
