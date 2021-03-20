@@ -745,6 +745,19 @@ derivative tc36
                     select ".text.Cpu1_Main.*";
                     select "(.text.text_cpu1|.text.text_cpu1.*)";
                 }
+
+            }
+            /*RT-Thread Code Section*/
+            group
+            {
+                group rt_thread_section (ordered, contiguous, align = 4, run_addr=mem:pfls0)
+                {
+                    /* section information for finsh shell */
+                    // select "FSymTab*";
+                    // select "VSymTab*";
+                    /* section information for RT-Thread auto initial. */
+                    select  ".rti_fn.*";
+                }
             }
         }
         

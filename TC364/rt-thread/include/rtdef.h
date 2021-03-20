@@ -197,7 +197,7 @@ typedef rt_base_t                       rt_off_t;       /**< Type for offset */
     #include <stdarg.h>
     #define SECTION(x)                  __attribute__((section(x)))
     #define RT_UNUSED                   __attribute__((unused))
-    #define RT_USED                     __attribute__((used))
+    #define RT_USED                     __attribute__((used, protect))
     #define PRAGMA(x)                   _Pragma(#x)
     #define ALIGN(n)                    __attribute__((aligned(n)))
     #define RT_WEAK                     __attribute__((weak))
@@ -214,7 +214,7 @@ typedef int (*init_fn_t)(void);
 #ifdef _MSC_VER /* we do not support MS VC++ compiler */
     #define INIT_EXPORT(fn, level)
 #else
-    #if RT_DEBUG_INIT
+    #ifdef RT_DEBUG_INIT
         struct rt_init_desc
         {
             const char* fn_name;

@@ -48,25 +48,52 @@ void led_thread_entry(void *parameter)
         IfxPort_togglePin(&MODULE_P21, 5);
     }
 }
+void led_demo_start(void){
 
-
-int main(void)
-{
     rt_thread_t tid;
     rt_err_t result;
-
-    rt_uint32_t count;
-
     GPIO_Demo_init();
     tid = &led_thread_thread;
     result = rt_thread_init(tid, "led", led_thread_entry, RT_NULL,
                 led_thread_stack, sizeof(led_thread_stack), 10, 20);
     RT_ASSERT(result == RT_EOK);
     rt_thread_startup(tid);
+    rt_kprintf("Application auto init ok!\n");
+}
+INIT_APP_EXPORT(led_demo_start);
+
+void export_test1(void){
+
+}
+INIT_APP_EXPORT(export_test1);
+
+void export_test2(void){
+
+}
+INIT_APP_EXPORT(export_test2);
+
+
+//void led_demo_start1(void){
+//
+//    rt_thread_t tid;
+//    rt_err_t result;
+//    GPIO_Demo_init();
+//    tid = &led_thread_thread;
+//    result = rt_thread_init(tid, "led", led_thread_entry, RT_NULL,
+//                led_thread_stack, sizeof(led_thread_stack), 10, 20);
+//    RT_ASSERT(result == RT_EOK);
+//    rt_thread_startup(tid);
+//    rt_kprintf("Application auto init ok!\n");
+//}
+//INIT_APP_EXPORT(led_demo_start1);
+
+int main(void)
+{
+    rt_uint32_t count;
+    rt_kprintf("hello rt-thread! %d\n",count++);
     while(1)
     {
         rt_thread_mdelay(1000);
-        rt_kprintf("hello rt-thread! %d\n",count++);
     }
 }
 
