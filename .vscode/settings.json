@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "Kconfig": "bat",
-        "cpu0_main.h": "c"
+        "cpu0_main.h": "c",
+        "zf_uart.h": "c"
     }
 }

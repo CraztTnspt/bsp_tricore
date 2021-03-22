@@ -60,11 +60,26 @@ void led_demo_start(void){
 }
 INIT_APP_EXPORT(led_demo_start);
 
+char get_char_test(void){
+    Ifx_SizeT count = 1;
+    uint8     data;
+
+    while (IfxAsclin_Asc_read(uart_get_handle(UART_0), &data, &count, TIME_INFINITE) != TRUE)
+    {
+        rt_thread_mdelay(10);
+    }
+
+    return data;
+}
+
 int main(void)
 {
     rt_kprintf("hello rt-thread!\n");
     while(1)
     {
+        char ch;
+        uart_getchar(UART_0,&ch);
+        rt_kprintf("%c",ch);
         rt_thread_mdelay(1000);
     }
 }

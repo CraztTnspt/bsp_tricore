@@ -60,13 +60,23 @@ void led_demo_start(void){
 }
 INIT_APP_EXPORT(led_demo_start);
 
+void rt_uart_getchar(UARTN_enum uartn, uint8 *dat)
+{
+    //uart_getchar( uartn, dat);
+    //while(!IfxAsclin_Asc_getReadCount(uart_get_handle(uartn)));
+    *dat = IfxAsclin_Asc_blockingRead(uart_get_handle(uartn));
+}
 int main(void)
 {
-    rt_uint32_t count = 0;
+    rt_kprintf("hello rt-thread!\n");
     while(1)
     {
-        rt_kprintf("hello rt-thread! %d\n",count++);
-        rt_thread_mdelay(1000);
+        uint8 ch;
+        //test_uart_getchar(UART_0, &ch);
+        ch=IfxAsclin_Asc_blockingRead(&uart0_handle);
+        //rt_uart_getchar(UART_0, &ch);
+        rt_kprintf("getchar: %c \n",ch);
+        rt_thread_mdelay(100);
     }
 }
 

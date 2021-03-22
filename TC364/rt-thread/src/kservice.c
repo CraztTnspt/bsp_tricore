@@ -1170,15 +1170,7 @@ RTM_EXPORT(rt_hw_console_output);
 
 char rt_hw_console_getchar(void)
 {
-    Ifx_SizeT count = 1;
-    uint8     data;
 
-    while (IfxAsclin_Asc_read(uart_get_handle(UART_0), &data, &count, TIME_INFINITE) != TRUE)
-    {
-        rt_thread_mdelay(10);
-    }
-
-    return data;
 }
 RTM_EXPORT(rt_hw_console_getchar);
 
