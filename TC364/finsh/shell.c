@@ -170,13 +170,8 @@ static int finsh_getchar(void)
 #ifdef RT_USING_POSIX
     return getchar();
 #else
-    char ch = 0;
-
-    RT_ASSERT(shell != RT_NULL);
-    while (rt_device_read(shell->device, -1, &ch, 1) != 1)
-        rt_sem_take(&shell->rx_sem, RT_WAITING_FOREVER);
-
-    return (int)ch;
+    extern char rt_hw_console_getchar(void);
+    return rt_hw_console_getchar();
 #endif
 #else
     extern char rt_hw_console_getchar(void);

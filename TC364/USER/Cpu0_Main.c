@@ -62,10 +62,9 @@ INIT_APP_EXPORT(led_demo_start);
 
 int main(void)
 {
-    rt_uint32_t count = 0;
+    rt_kprintf("hello rt-thread!\n");
     while(1)
     {
-        rt_kprintf("hello rt-thread! %d\n",count++);
         rt_thread_mdelay(1000);
     }
 }

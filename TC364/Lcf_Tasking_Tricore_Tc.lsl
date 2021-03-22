@@ -753,8 +753,8 @@ derivative tc36
                 group rt_thread_section (ordered, contiguous, align = 4, run_addr=mem:pfls0)
                 {
                     /* section information for finsh shell */
-                    // select "FSymTab*";
-                    // select "VSymTab*";
+                    select "FSymTab*";
+                    select "VSymTab*";
                     /* section information for RT-Thread auto initial. */
                     select  ".rti_fn.*";
                 }

@@ -120,6 +120,7 @@ void rt_hw_context_switch_interrupt(rt_ubase_t from, rt_ubase_t to);
 #endif /*RT_USING_SMP*/
 
 void rt_hw_console_output(const char *str);
+char rt_hw_console_getchar(void);
 
 void rt_hw_backtrace(rt_uint32_t *fp, rt_ubase_t thread_entry);
 void rt_hw_show_memory(rt_uint32_t addr, rt_size_t size);
