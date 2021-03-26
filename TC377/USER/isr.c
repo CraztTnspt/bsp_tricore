@@ -2,17 +2,17 @@
  
 /*********************************************************************************************************************
  * COPYRIGHT NOTICE
- * Copyright (c) 2020,Öð·É¿Æ¼¼
+ * Copyright (c) 2020,ï¿½ï¿½É¿Æ¼ï¿½
  * All rights reserved.
- * ¼¼ÊõÌÖÂÛQQÈº£ºÈýÈº£º824575535
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½QQÈºï¿½ï¿½ï¿½ï¿½Èºï¿½ï¿½824575535
  *
- * ÒÔÏÂËùÓÐÄÚÈÝ°æÈ¨¾ùÊôÖð·É¿Æ¼¼ËùÓÐ£¬Î´¾­ÔÊÐí²»µÃÓÃÓÚÉÌÒµÓÃÍ¾£¬
- * »¶Ó­¸÷Î»Ê¹ÓÃ²¢´«²¥±¾³ÌÐò£¬ÐÞ¸ÄÄÚÈÝÊ±±ØÐë±£ÁôÖð·É¿Æ¼¼µÄ°æÈ¨ÉùÃ÷¡£
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý°ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¿Æ¼ï¿½ï¿½ï¿½ï¿½Ð£ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½Í¾ï¿½ï¿½
+ * ï¿½ï¿½Ó­ï¿½ï¿½Î»Ê¹ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ë±£ï¿½ï¿½ï¿½ï¿½É¿Æ¼ï¿½ï¿½Ä°ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  *
  * @file       		isr
- * @company	   		³É¶¼Öð·É¿Æ¼¼ÓÐÏÞ¹«Ë¾
- * @author     		Öð·É¿Æ¼¼(QQ3184284598)
- * @version    		²é¿´docÄÚversionÎÄ¼þ °æ±¾ËµÃ÷
+ * @company	   		ï¿½É¶ï¿½ï¿½ï¿½É¿Æ¼ï¿½ï¿½ï¿½ï¿½Þ¹ï¿½Ë¾
+ * @author     		ï¿½ï¿½É¿Æ¼ï¿½(QQ3184284598)
+ * @version    		ï¿½é¿´docï¿½ï¿½versionï¿½Ä¼ï¿½ ï¿½æ±¾Ëµï¿½ï¿½
  * @Software 		ADS v1.2.2
  * @Target core		TC377TP
  * @Taobao   		https://seekfree.taobao.com/
@@ -24,10 +24,10 @@
 #include "isr.h"
 
 
-//PITÖÐ¶Ïº¯Êý  Ê¾Àý
+//PITï¿½Ð¶Ïºï¿½ï¿½ï¿½  Ê¾ï¿½ï¿½
 IFX_INTERRUPT(cc60_pit_ch0_isr, 0, CCU6_0_CH0_ISR_PRIORITY)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
 	PIT_CLEAR_FLAG(CCU6_0, PIT_CH0);
 
 }
@@ -35,21 +35,21 @@ IFX_INTERRUPT(cc60_pit_ch0_isr, 0, CCU6_0_CH0_ISR_PRIORITY)
 
 IFX_INTERRUPT(cc60_pit_ch1_isr, 0, CCU6_0_CH1_ISR_PRIORITY)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
 	PIT_CLEAR_FLAG(CCU6_0, PIT_CH1);
 
 }
 
 IFX_INTERRUPT(cc61_pit_ch0_isr, 0, CCU6_1_CH0_ISR_PRIORITY)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
 	PIT_CLEAR_FLAG(CCU6_1, PIT_CH0);
 
 }
 
 IFX_INTERRUPT(cc61_pit_ch1_isr, 0, CCU6_1_CH1_ISR_PRIORITY)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
 	PIT_CLEAR_FLAG(CCU6_1, PIT_CH1);
 
 }
@@ -59,13 +59,13 @@ IFX_INTERRUPT(cc61_pit_ch1_isr, 0, CCU6_1_CH1_ISR_PRIORITY)
 
 IFX_INTERRUPT(eru_ch0_ch4_isr, 0, ERU_CH0_CH4_INT_PRIO)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
-	if(GET_GPIO_FLAG(ERU_CH0_REQ4_P10_7))//Í¨µÀ0ÖÐ¶Ï
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
+	if(GET_GPIO_FLAG(ERU_CH0_REQ4_P10_7))//Í¨ï¿½ï¿½0ï¿½Ð¶ï¿½
 	{
 		CLEAR_GPIO_FLAG(ERU_CH0_REQ4_P10_7);
 	}
 
-	if(GET_GPIO_FLAG(ERU_CH4_REQ13_P15_5))//Í¨µÀ4ÖÐ¶Ï
+	if(GET_GPIO_FLAG(ERU_CH4_REQ13_P15_5))//Í¨ï¿½ï¿½4ï¿½Ð¶ï¿½
 	{
 		CLEAR_GPIO_FLAG(ERU_CH4_REQ13_P15_5);
 	}
@@ -73,28 +73,28 @@ IFX_INTERRUPT(eru_ch0_ch4_isr, 0, ERU_CH0_CH4_INT_PRIO)
 
 IFX_INTERRUPT(eru_ch1_ch5_isr, 0, ERU_CH1_CH5_INT_PRIO)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
-	if(GET_GPIO_FLAG(ERU_CH1_REQ5_P10_8))//Í¨µÀ1ÖÐ¶Ï
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
+	if(GET_GPIO_FLAG(ERU_CH1_REQ5_P10_8))//Í¨ï¿½ï¿½1ï¿½Ð¶ï¿½
 	{
 		CLEAR_GPIO_FLAG(ERU_CH1_REQ5_P10_8);
 	}
 
-	if(GET_GPIO_FLAG(ERU_CH5_REQ1_P15_8))//Í¨µÀ5ÖÐ¶Ï
+	if(GET_GPIO_FLAG(ERU_CH5_REQ1_P15_8))//Í¨ï¿½ï¿½5ï¿½Ð¶ï¿½
 	{
 		CLEAR_GPIO_FLAG(ERU_CH5_REQ1_P15_8);
 	}
 }
 
-//ÓÉÓÚÉãÏñÍ·pclkÒý½ÅÄ¬ÈÏÕ¼ÓÃÁË 2Í¨µÀ£¬ÓÃÓÚ´¥·¢DMA£¬Òò´ËÕâÀï²»ÔÙ¶¨ÒåÖÐ¶Ïº¯Êý
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·pclkï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ 2Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½DMAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï²»ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½Ð¶Ïºï¿½ï¿½ï¿½
 //IFX_INTERRUPT(eru_ch2_ch6_isr, 0, ERU_CH2_CH6_INT_PRIO)
 //{
-//	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
-//	if(GET_GPIO_FLAG(ERU_CH2_REQ7_P00_4))//Í¨µÀ2ÖÐ¶Ï
+//	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
+//	if(GET_GPIO_FLAG(ERU_CH2_REQ7_P00_4))//Í¨ï¿½ï¿½2ï¿½Ð¶ï¿½
 //	{
 //		CLEAR_GPIO_FLAG(ERU_CH2_REQ7_P00_4);
 //
 //	}
-//	if(GET_GPIO_FLAG(ERU_CH6_REQ9_P20_0))//Í¨µÀ6ÖÐ¶Ï
+//	if(GET_GPIO_FLAG(ERU_CH6_REQ9_P20_0))//Í¨ï¿½ï¿½6ï¿½Ð¶ï¿½
 //	{
 //		CLEAR_GPIO_FLAG(ERU_CH6_REQ9_P20_0);
 //
@@ -105,8 +105,8 @@ IFX_INTERRUPT(eru_ch1_ch5_isr, 0, ERU_CH1_CH5_INT_PRIO)
 
 IFX_INTERRUPT(eru_ch3_ch7_isr, 0, ERU_CH3_CH7_INT_PRIO)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
-	if(GET_GPIO_FLAG(ERU_CH3_REQ6_P02_0))//Í¨µÀ3ÖÐ¶Ï
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
+	if(GET_GPIO_FLAG(ERU_CH3_REQ6_P02_0))//Í¨ï¿½ï¿½3ï¿½Ð¶ï¿½
 	{
 		CLEAR_GPIO_FLAG(ERU_CH3_REQ6_P02_0);
 		if		(CAMERA_GRAYSCALE == camera_type)	mt9v03x_vsync();
@@ -114,7 +114,7 @@ IFX_INTERRUPT(eru_ch3_ch7_isr, 0, ERU_CH3_CH7_INT_PRIO)
 		else if	(CAMERA_BIN       == camera_type)	ov7725_vsync();
 
 	}
-	if(GET_GPIO_FLAG(ERU_CH7_REQ16_P15_1))//Í¨µÀ7ÖÐ¶Ï
+	if(GET_GPIO_FLAG(ERU_CH7_REQ16_P15_1))//Í¨ï¿½ï¿½7ï¿½Ð¶ï¿½
 	{
 		CLEAR_GPIO_FLAG(ERU_CH7_REQ16_P15_1);
 
@@ -125,7 +125,7 @@ IFX_INTERRUPT(eru_ch3_ch7_isr, 0, ERU_CH3_CH7_INT_PRIO)
 
 IFX_INTERRUPT(dma_ch5_isr, 0, ERU_DMA_INT_PRIO)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
 
 	if		(CAMERA_GRAYSCALE == camera_type)	mt9v03x_dma();
 	else if (CAMERA_BIN_UART  == camera_type)	ov7725_uart_dma();
@@ -133,58 +133,58 @@ IFX_INTERRUPT(dma_ch5_isr, 0, ERU_DMA_INT_PRIO)
 }
 
 
-//´®¿ÚÖÐ¶Ïº¯Êý  Ê¾Àý
-IFX_INTERRUPT(uart0_tx_isr, 0, UART0_TX_INT_PRIO)
-{
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
-    IfxAsclin_Asc_isrTransmit(&uart0_handle);
-}
-IFX_INTERRUPT(uart0_rx_isr, 0, UART0_RX_INT_PRIO)
-{
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
-    IfxAsclin_Asc_isrReceive(&uart0_handle);
-}
-IFX_INTERRUPT(uart0_er_isr, 0, UART0_ER_INT_PRIO)
-{
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
-    IfxAsclin_Asc_isrError(&uart0_handle);
-}
+//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶Ïºï¿½ï¿½ï¿½  Ê¾ï¿½ï¿½
+// IFX_INTERRUPT(uart0_tx_isr, 0, UART0_TX_INT_PRIO)
+// {
+// 	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
+//     IfxAsclin_Asc_isrTransmit(&uart0_handle);
+// }
+// IFX_INTERRUPT(uart0_rx_isr, 0, UART0_RX_INT_PRIO)
+// {
+// 	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
+//     IfxAsclin_Asc_isrReceive(&uart0_handle);
+// }
+// IFX_INTERRUPT(uart0_er_isr, 0, UART0_ER_INT_PRIO)
+// {
+// 	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
+//     IfxAsclin_Asc_isrError(&uart0_handle);
+// }
 
-//´®¿Ú1Ä¬ÈÏÁ¬½Óµ½ÉãÏñÍ·ÅäÖÃ´®¿Ú
+//ï¿½ï¿½ï¿½ï¿½1Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½
 IFX_INTERRUPT(uart1_tx_isr, 0, UART1_TX_INT_PRIO)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
     IfxAsclin_Asc_isrTransmit(&uart1_handle);
 }
 IFX_INTERRUPT(uart1_rx_isr, 0, UART1_RX_INT_PRIO)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
     IfxAsclin_Asc_isrReceive(&uart1_handle);
     if		(CAMERA_GRAYSCALE == camera_type)	mt9v03x_uart_callback();
     else if (CAMERA_BIN_UART  == camera_type)	ov7725_uart_callback();
 }
 IFX_INTERRUPT(uart1_er_isr, 0, UART1_ER_INT_PRIO)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
     IfxAsclin_Asc_isrError(&uart1_handle);
 }
 
 
-//´®¿Ú2Ä¬ÈÏÁ¬½Óµ½ÎÞÏß×ª´®¿ÚÄ£¿é
+//ï¿½ï¿½ï¿½ï¿½2Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
 IFX_INTERRUPT(uart2_tx_isr, 0, UART2_TX_INT_PRIO)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
     IfxAsclin_Asc_isrTransmit(&uart2_handle);
 }
 IFX_INTERRUPT(uart2_rx_isr, 0, UART2_RX_INT_PRIO)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
     IfxAsclin_Asc_isrReceive(&uart2_handle);
     wireless_uart_callback();
 }
 IFX_INTERRUPT(uart2_er_isr, 0, UART2_ER_INT_PRIO)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
     IfxAsclin_Asc_isrError(&uart2_handle);
 }
 
@@ -192,16 +192,16 @@ IFX_INTERRUPT(uart2_er_isr, 0, UART2_ER_INT_PRIO)
 
 IFX_INTERRUPT(uart3_tx_isr, 0, UART3_TX_INT_PRIO)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
     IfxAsclin_Asc_isrTransmit(&uart3_handle);
 }
 IFX_INTERRUPT(uart3_rx_isr, 0, UART3_RX_INT_PRIO)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
     IfxAsclin_Asc_isrReceive(&uart3_handle);
 }
 IFX_INTERRUPT(uart3_er_isr, 0, UART3_ER_INT_PRIO)
 {
-	enableInterrupts();//¿ªÆôÖÐ¶ÏÇ¶Ì×
+	enableInterrupts();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ç¶ï¿½ï¿½
     IfxAsclin_Asc_isrError(&uart3_handle);
 }
